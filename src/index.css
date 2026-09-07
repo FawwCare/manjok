@@ -318,6 +318,10 @@ textarea.input-field {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline: none;
 }
 
 .hotspot::before {
