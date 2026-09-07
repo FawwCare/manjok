@@ -1,16 +1,36 @@
-# React + Vite
+# 🌿 헬스케어 설문 웹앱 - 바이브 코딩 & Git 협업 가이드
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+아래 브랜치 규칙과 워크플로우를 기준으로 협업합니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 1. 📂 브랜치 규칙
+* **`main`**: 언제나 배포 가능한 깨끗한 메인 브랜치 (**직접 푸시 금지 ❌**)
+* **`feature/기능이름`**: 새로운 화면, 컴포넌트, 기능을 만들 때 개발용으로 파는 브랜치
+* **`refactor/작업이름`**: 기존 코드를 리팩토링하거나 구조를 개선할 때 파는 브랜치
+* **`fix/이슈이름`**: 버그나 에러를 수정할 때 파는 브랜치
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 2. 🚀 일상적인 작업 워크플로우 (Step-by-Step)
 
-## Expanding the Oxlint configuration
+### ① 작업 시작 전 (가장 중요 ⭐)
+코딩을 시작하기 전, 내 로컬 환경이 꼬이는 것을 방지하기 위해 **항상 최신 `main` 브랜치를 pull(동기화)** 하고 시작합니다.
+> **Prompt / 터미널 예시:** *"원격 저장소 최신 `main` 브랜치 내용 받아와서 동기화해 줘."*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### ② 작업용 브랜치 생성
+만들려는 성격에 맞춰 적절한 접두사(`feature/`, `refactor/`, `fix/`)를 붙여 새 브랜치를 파고 이동합니다.
+> **Prompt / 터미널 예시:** *"설문 입력 폼 구현을 위해 `feature/survey-form` 브랜치 새로 파고 이동해 줘."*
+
+### ③ AI와 함께 바이브 코딩 진행!
+* AI 에이전트와 함께 편하게 코드를 작성합니다.
+
+### ④ 원격 저장소에 푸시하기
+작업이 끝나면 내 로컬 브랜치와 **똑같은 이름**으로 원격 저장소에 업로드합니다.
+> **Prompt / 터미널 예시:** *"지금 작업 중인 브랜치 원격 저장소에 같은 이름으로 푸시해 줘 (`git push -u origin feature/survey-form`)."*
+
+### ⑤ PR 날리고 함께 검토하기 (Merge & 복귀)
+1. GitHub 웹페이지로 이동합니다.
+2. `Compare & pull request` 버튼을 눌러 **내 브랜치 $\rightarrow$ `main`**으로 향하는 PR을 엽니다.
+3. 팀원과 함께 코드를 가볍게 검토(Review)한 뒤 이상 없으면 **Merge**합니다!
+4. **마무리:** 작업이 끝난 브랜치를 닫고, 내 로컬도 다시 안전하게 `main` 브랜치로 돌아옵니다(`git checkout main` 후 `git pull`).
